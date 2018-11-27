@@ -15,12 +15,18 @@
         "ralouphie/mimey": "2.0.*"
     },
     "require-dev": {
+        "mockery/mockery": "1.2.*",
         "orchestra/testbench": "3.7.*",
         "phpunit/phpunit": "7.4.*"
     },
     "autoload": {
         "psr-4": {
             "Juice\\Attachments\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Juice\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
