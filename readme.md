@@ -26,7 +26,7 @@ Provide attachment controller and just use it in your application routes. We tak
 
 ## Controller Methods
 
-＊：Assume namespace is `\Juice\Attachments\Controllers`
+＊：Assume route namespace is `\Juice\Attachments\Controllers`
 
 ### Upload Attachments
 
@@ -58,7 +58,7 @@ Provide attachment controller and just use it in your application routes. We tak
 
 - route example
 
-  `Route::post('/attachments', 'AttachmentController@upload')`
+  `Route::post('/attachments', 'AttachmentController@upload');`
 
 ### Download Attachment
 
