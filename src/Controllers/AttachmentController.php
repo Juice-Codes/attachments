@@ -37,7 +37,6 @@ class AttachmentController
      */
     public function upload(Request $request)
     {
-        dd($request->user());
         /** @var UploadedFile $file */
 
         foreach ($request->file('ja_file') as $file) {
