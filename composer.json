@@ -1,7 +1,7 @@
 {
     "name": "juice/attachments",
     "description": "Juice Attachments Plugin.",
-    "keywords": ["juice.codes"],
+    "keywords": ["juice.codes", "laravel", "lumen", "attachments"],
     "license": "proprietary",
     "require": {
         "php": "^7.2",
