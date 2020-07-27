@@ -1,46 +1,52 @@
 {
-    "name": "juice/attachments",
-    "description": "Juice Attachments Plugin.",
-    "keywords": ["juice.codes", "laravel", "lumen", "attachments"],
-    "license": "proprietary",
-    "require": {
-        "php": "^7.2",
-        "hashids/hashids": "3.0.*",
-        "illuminate/cache": "5.7.*",
-        "illuminate/console": "5.7.*",
-        "illuminate/database": "5.7.*",
-        "illuminate/filesystem": "5.7.*",
-        "illuminate/support": "5.7.*",
-        "intervention/image": "2.4.*",
-        "ralouphie/mimey": "2.0.*"
-    },
-    "require-dev": {
-        "mockery/mockery": "1.2.*",
-        "orchestra/testbench": "3.7.*",
-        "phpunit/phpunit": "7.4.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Juice\\Attachments\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Juice\\Tests\\": "tests/"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Juice\\Attachments\\AttachmentsServiceProvider"
-            ]
-        }
+  "name": "juice/attachments",
+  "description": "Juice Attachments Plugin.",
+  "keywords": [
+    "juice.codes",
+    "laravel",
+    "lumen",
+    "attachments"
+  ],
+  "license": "proprietary",
+  "require": {
+    "php": "^7.2",
+    "hashids/hashids": "~3.0|~4.0",
+    "illuminate/cache": "~5.7|~6.0|~7.0|~8.0",
+    "illuminate/console": "~5.7|~6.0|~7.0|~8.0",
+    "illuminate/database": "~5.7|~6.0|~7.0|~8.0",
+    "illuminate/filesystem": "~5.7|~6.0|~7.0|~8.0",
+    "illuminate/support": "~5.7|~6.0|~7.0|~8.0",
+    "intervention/image": "~2.4",
+    "ralouphie/mimey": "~2.0"
+  },
+  "require-dev": {
+    "ext-json": "*",
+    "mockery/mockery": "~1.2",
+    "orchestra/testbench": "~3.7|~4.0|~5.0",
+    "phpunit/phpunit": "~7.4|~8.0|~9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Juice\\Attachments\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Juice\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Juice\\Attachments\\AttachmentsServiceProvider"
+      ]
+    }
+  }
 }
