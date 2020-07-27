@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
 use Juice\Attachments\Attachment;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
@@ -49,7 +50,7 @@ class AttachmentController
                 'name' => $file->getClientOriginalName(),
                 'mime' => $file->getMimeType() ?: 'text/plain',
                 'size' => $file->getSize(),
-                'trash_token' => str_random(8),
+                'trash_token' => Str::random(8),
             ]);
 
             $this->attachment->save();

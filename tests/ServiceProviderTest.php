@@ -3,12 +3,14 @@
 namespace Juice\Tests;
 
 use Hashids\Hashids;
+use Illuminate\Support\Str;
+use Juice\Attachments\AttachmentsServiceProvider;
 
 class ServiceProviderTest extends TestCase
 {
     public function test_service_provider_loaded()
     {
-        $provider = \Juice\Attachments\AttachmentsServiceProvider::class;
+        $provider = AttachmentsServiceProvider::class;
 
         $loaded = $this->app->getLoadedProviders();
 
@@ -19,7 +21,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_hashids_registered_correctly()
     {
-        $salt = str_random();
+        $salt = Str::random();
 
         $this->app['config']->set('juice-attachments.hashids-salt', $salt);
 

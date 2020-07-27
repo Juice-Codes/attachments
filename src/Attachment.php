@@ -4,6 +4,7 @@ namespace Juice\Attachments;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Arr;
 use Mimey\MimeTypes;
 
 class Attachment extends Model
@@ -46,7 +47,7 @@ class Attachment extends Model
             return null;
         }
 
-        $model = $this->find(array_last(app('ja-hashids')->decode($encoded)));
+        $model = $this->find(Arr::last(app('ja-hashids')->decode($encoded)));
 
         if (is_null($model)) {
             return null;

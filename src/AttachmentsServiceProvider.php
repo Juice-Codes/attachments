@@ -6,6 +6,7 @@ use Hashids\Hashids;
 use Illuminate\Support\ServiceProvider;
 use Juice\Attachments\Commands\CleanupTrashCommand;
 use Juice\Attachments\Commands\SetupCommand;
+use Laravel\Lumen\Application;
 
 class AttachmentsServiceProvider extends ServiceProvider
 {
@@ -16,7 +17,7 @@ class AttachmentsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if ($this->app instanceof \Laravel\Lumen\Application) {
+        if ($this->app instanceof Application) {
             $this->app->configure('juice-attachments');
         } else {
             if ($this->app->runningInConsole()) {

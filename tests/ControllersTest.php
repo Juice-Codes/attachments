@@ -5,6 +5,7 @@ namespace Juice\Tests;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Str;
 use Juice\Attachments\Attachment;
 use Juice\Attachments\Controllers\AttachmentController;
 use Mockery as m;
@@ -29,7 +30,7 @@ class ControllersTest extends TestCase
 
     public function test_upload_method_with_invalid_files()
     {
-        $m = m::mock(UploadedFile::fake()->image(sprintf('%s.png', str_random(6))));
+        $m = m::mock(UploadedFile::fake()->image(sprintf('%s.png', Str::random(6))));
 
         $m->shouldReceive('isValid')->andReturnFalse();
 
@@ -137,7 +138,7 @@ class ControllersTest extends TestCase
         $files['ja_file'] = [];
 
         while ($count--) {
-            $filename = sprintf('%s.png', str_random(6));
+            $filename = sprintf('%s.png', Str::random(6));
 
             $files['ja_file'][] = UploadedFile::fake()->image($filename);
         }
